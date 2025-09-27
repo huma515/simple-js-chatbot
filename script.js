@@ -1,7 +1,7 @@
 const chatBox = document.getElementById("chat-box");
 const userInput = document.getElementById("user-input");
 
-// Predefined chatbot replies (Education Based)
+
 const responses = [
   { keywords: ["hello", "hi", "hey"], reply: "Hello 👋 Welcome to ABC Institute! How are you today?" },
   { keywords: ["fee", "fees", "charges"], reply: "Our institute fee is 5000 PKR per month. Would you like to know about the available courses?" },
@@ -12,7 +12,7 @@ const responses = [
   { keywords: ["teacher", "instructor", "faculty"], reply: "Our teachers are highly qualified with 5+ years of experience in their respective fields." },
   { keywords: ["admission", "join", "enroll"], reply: "The admission process is simple: Fill the online form, submit your documents, and confirm your fee payment." },
 
-  //  Specific course replies
+  
   { keywords: ["html"], reply: "Great choice 👍 HTML is the foundation of web development. You’ll learn how to structure websites properly." },
   { keywords: ["css"], reply: "CSS will help you style and design your websites beautifully 🎨. It’s the backbone of modern web design." },
   { keywords: ["javascript", "js"], reply: "JavaScript adds life to your websites ⚡. You’ll learn logic, interactivity, and dynamic features." },
@@ -48,7 +48,7 @@ function sendMessage() {
   userInput.value = "";
 }
 
-// Function to get bot reply
+
 function getBotReply(msg) {
   for (let item of responses) {
     for (let keyword of item.keywords) {
@@ -60,7 +60,7 @@ function getBotReply(msg) {
   return "I'm sorry, I didn’t quite understand that 🤔 Could you please ask something related to our institute, courses, or timings?";
 }
 
-// Send message on Enter key
+
 userInput.addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
     sendMessage();
